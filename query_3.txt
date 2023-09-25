@@ -1,0 +1,4 @@
+SELECT PROTOCOL AS Network_Protocol, COUNT(*) AS Total_Flows, SUM(IN_BYTES) AS Total_Bytes
+FROM sample
+GROUP BY Network_Protocol
+ORDER BY Total_Bytes DESC

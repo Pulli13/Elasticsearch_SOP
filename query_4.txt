@@ -1,0 +1,4 @@
+SELECT PROTOCOL AS Application, SUM(IN_BYTES) AS TotalBytes
+FROM sample
+GROUP BY Application
+ORDER BY TotalBytes DESC

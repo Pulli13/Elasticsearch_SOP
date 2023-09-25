@@ -1,0 +1,4 @@
+SELECT COUNT(*) AS Flow_Count,
+  (MAX(LAST_SWITCHED) - MIN(FIRST_SWITCHED)) AS Time_Period,
+  COUNT(*) / (MAX(LAST_SWITCHED) - MIN(FIRST_SWITCHED)) AS Flow_Rate_Per_Minute
+FROM sample

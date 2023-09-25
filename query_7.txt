@@ -1,0 +1,2 @@
+SELECT AVG(IN_BYTES / IN_PKTS) AS Average_Packet_Size
+FROM sample

@@ -1,0 +1,7 @@
+SELECT IPV4_SRC_ADDR AS Source_IP, IPV4_DST_ADDR AS Destination_IP,
+  CASE
+    WHEN INPUT_SNMP = 0 THEN 'Outbound'
+    WHEN OUTPUT_SNMP = 0 THEN 'Inbound'
+    ELSE 'Internal'
+  END AS Flow_Direction
+FROM sample

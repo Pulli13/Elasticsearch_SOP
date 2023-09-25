@@ -1,0 +1,5 @@
+SELECT IPV4_SRC_ADDR AS Source_IP, L4_SRC_PORT AS Source_Port, IPV4_DST_ADDR AS Destination_IP, L4_DST_PORT AS Destination_Port, SUM(IN_BYTES) AS TotalBytes
+FROM sample
+GROUP BY Source_IP, Source_Port, Destination_IP, Destination_Port
+ORDER BY TotalBytes DESC
+LIMIT 4

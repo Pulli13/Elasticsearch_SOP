@@ -1,0 +1,4 @@
+SELECT L4_DST_PORT AS Destination_Port, COUNT(*) AS Flow_Count
+FROM sample
+GROUP BY L4_DST_PORT
+ORDER BY Flow_Count DESC

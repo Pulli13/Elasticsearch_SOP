@@ -1,0 +1,3 @@
+SELECT IPV4_SRC_ADDR AS Source_IP, IPV4_DST_ADDR AS Destination_IP
+FROM sample
+GROUP BY Source_IP,Destination_IP
